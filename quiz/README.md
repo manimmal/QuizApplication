@@ -44,7 +44,9 @@ All DDL scripts are mentioned in the file : create-db.sql
 
 Question and Answers can be modified in file : \src\main\resources\scripts\insert-data.sql
 
-Refer swagger.json for API specifications
+Refer swagger.json for API specifications.
+
+Access {{base URL}}/swagger-ui.html to access swagger UI with with REST endpoints.
 
 Application Features :
 
