@@ -1,0 +1,27 @@
+<h2>Quiz Application Test</h2>
+<h4>Current Time :{{now}}</h4>
+<form>
+    <table>
+    	<tr *ngIf="showError">
+          <td colspan="2"><b color="res"><font color="red">Please select an answer to continue</font></b></td>
+        </tr>
+       
+        <tr>
+          <td colspan="2"><h3>{{quesCount}}) {{question}}</h3></td> 
+        </tr>
+         <tr>
+        	<td colspan="2">&nbsp;</td>
+        </tr>
+        <tbody>
+        <tr *ngFor="let item of keys">
+    <td>{{answers[item]}}</td>
+    <td>
+        <input type="radio" name="radiogroup"  [(ngModel)]="selanswer" 
+            [value]="item">
+    </td>
+</tr>
+        </tbody>
+      </table>
+      <button [disabled]="loadingPrevious" (click)="previous()">Previous</button> &nbsp;&nbsp;&nbsp;&nbsp;
+      <button id="next_button" [disabled]="loadingNext" (click)="next()">Next</button>
+</form>
