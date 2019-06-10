@@ -49,7 +49,7 @@ Refer swagger.json for API specifications, generated through http://localhost:80
 
 Access http://localhost:8080/swagger-ui.html to access swagger UI with with REST endpoints.
 
-Refer code coverage in the folder : quiz\target\site\jacoco
+Refer Jacoco code coverage in the file : Code_Coverage.zip
 
 Application Features :
 
