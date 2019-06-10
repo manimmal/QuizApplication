@@ -23,4 +23,7 @@ public interface UserAnswerRepo extends JpaRepository<UserAnswer, Integer> {
 	
 	@Query(value = "select count(t.uaid) from UserAnswer t, Answer a where a.aid = t.aid and t.uid=:userId and a.correct='Y'")
 	public Integer CountCorrectAnswers(@Param ("userId") Integer userId);
+	
+	@Query(value = "select t from UserAnswer t where t.uid=:userId and orderNum=:orderNum")
+	public UserAnswer retrieveSecondQuestion(@Param ("userId") Integer userId, @Param ("orderNum") Integer orderNum);
 }

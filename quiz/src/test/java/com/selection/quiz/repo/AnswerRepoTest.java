@@ -7,21 +7,19 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.selection.quiz.entity.Answer;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(UserRepo.class)
 public class AnswerRepoTest {
 
 	@MockBean
     private AnswerRepo answerRepo;
 
     @Test
-    public void retrieveAnswersForQuestion() throws Exception {
+    public void retrieveAnswersForRQuestion() throws Exception {
     	Answer answer = new Answer();
     	answer.setAid(1);
     	answer.setAnswer("test");

@@ -8,7 +8,8 @@ Quiz Applications :
 Prerequisites :
 
 	1. Java 8
-	2. Eclipse (for developer : Installed with lombok and Maven plugins)
+	2. Maven
+	3. Eclipse (for developer : Installed with lombok and Maven plugins)
 
 Technologies/Frameworks :
 
@@ -30,7 +31,7 @@ Maven Build Quiz Applications :generate jar
 	
 Start Quiz REST Java Application : spring boot application
 
-	1. java -jar quiz-app-0.0.1-SNAPSHOT.jar
+	1. java -jar quiz-0.0.1-SNAPSHOT.jar
 
 Application Configued Logins, modify any changes required in file : \src\main\resources\scripts\insert-data.sql
 	
@@ -44,9 +45,11 @@ All DDL scripts are mentioned in the file : create-db.sql
 
 Question and Answers can be modified in file : \src\main\resources\scripts\insert-data.sql
 
-Refer swagger.json for API specifications.
+Refer swagger.json for API specifications, generated through http://localhost:8080/v2/api-docs
 
-Access {{base URL}}/swagger-ui.html to access swagger UI with with REST endpoints.
+Access http://localhost:8080/swagger-ui.html to access swagger UI with with REST endpoints.
+
+Refer code coverage in the folder : quiz\target\site\jacoco
 
 Application Features :
 
@@ -62,5 +65,5 @@ Futute Enhancements :
 	1. Test left in between will be carried from there in the next login.
 	2. Selecting multiple answers for each question.
 	3. External database for production application.
-	4. Admin  screen to display all test attended users and results. 
+	4. Admin screen to display all test attended users and results. 
 	5. Configure questions and answers from Admin sceen.

@@ -1,17 +1,15 @@
 package com.selection.quiz.repo;
 
-import org.mockito.Mockito;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.mockito.Mockito;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.selection.quiz.entity.User;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(UserRepo.class)
 public class UserRepoTest {
 
 	@MockBean

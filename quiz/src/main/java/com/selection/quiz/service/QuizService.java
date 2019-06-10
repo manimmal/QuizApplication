@@ -128,7 +128,7 @@ public class QuizService {
 		userAnswer.setAid(request.getAnswerId());
 		userAnswerRepo.save(userAnswer);
 		
-		userAnswer = userAnswerRepo.retrieveQuestion(request.getUserId(), request.getQuestionId() + 1);
+		userAnswer = userAnswerRepo.retrieveSecondQuestion(request.getUserId(), request.getQuestionId() + 1);
 		Question question = questionRepo.getOne(userAnswer.getQid());
 		List<Answer> answerList = retrieveAnswersForQuestion(question.getQid());
 		Map<Integer, String> answerMap = new LinkedHashMap<Integer, String> ();
@@ -160,7 +160,7 @@ public class QuizService {
 		userAnswer.setAid(request.getAnswerId());
 		userAnswerRepo.save(userAnswer);
 		
-		userAnswer = userAnswerRepo.retrieveQuestion(request.getUserId(), request.getQuestionId() - 1);
+		userAnswer = userAnswerRepo.retrieveSecondQuestion(request.getUserId(), request.getQuestionId() - 1);
 		Question question = questionRepo.getOne(userAnswer.getQid());
 		List<Answer> answerList = retrieveAnswersForQuestion(question.getQid());
 		Map<Integer, String> answerMap = new LinkedHashMap<Integer, String> ();
